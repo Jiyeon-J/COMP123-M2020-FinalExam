@@ -17,7 +17,7 @@ namespace COMP123_M2020_FinalExam
             InitializeComponent();
         }
 
-        public void GenerateNames()
+        private void GenerateNames()
         {
             var random = new Random();
 
@@ -29,19 +29,21 @@ namespace COMP123_M2020_FinalExam
         }
         private void GenerateNameForm_Load(object sender, EventArgs e)
         {
-            GenerateNames();
+            this.GenerateNames();
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            GenerateNames();
-
-            FirstNameTextBox.Text = Program.character.FirstName;
-            LastNameTextBox.Text = Program.character.LastName;
+            this.GenerateNames();
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            Character character = Program.character;
+
+            character.FirstName = FirstNameTextBox.Text;
+            character.LastName = LastNameTextBox.Text;
+           
             AbilityGeneratorForm abilityGeneratorForm = new AbilityGeneratorForm();
             this.Hide();
             abilityGeneratorForm.Show();

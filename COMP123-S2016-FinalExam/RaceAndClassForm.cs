@@ -47,8 +47,18 @@ namespace COMP123_M2020_FinalExam
             FinalForm finalForm = new FinalForm();
             finalForm.previousForm = this;
 
+            Character character = Program.character;
+
+            character.Race = _selectedRace;
+
+
             finalForm.Show();
             this.Hide();
+        }
+
+        private void RaceAndClassForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
