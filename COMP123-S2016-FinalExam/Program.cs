@@ -8,6 +8,14 @@ namespace COMP123_M2020_FinalExam
 {
     public static class Program
     {
+
+        /*The Author's name: Jiyeon Jeon
+        Author's student number: #301103064
+        Date last Modified: August 20, 2020
+        Program description: Character Builder
+        Revision History: 1.0 created August 20, 2020 Jiyeon 
+        */
+
         public static Character character = new Character();
         
         public static SplashForm splashForm;
@@ -26,7 +34,7 @@ namespace COMP123_M2020_FinalExam
             splashForm = new SplashForm();
             generateNameForm = new GenerateNameForm();
             
-            Application.Run(new AbilityGeneratorForm());
+            Application.Run(new SplashForm());
         }
     }
 }
